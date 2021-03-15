@@ -1,5 +1,6 @@
 # [Project Definition Document]
 Create a RESTful API service, exposed at port 8080 via HTTP, with URI "/predict", able to receive HTTP POST requests with JSON formatted payload, which contains a data object, e.g. "{"data": [list of needed elements type]})".
+Service name: keras-rest-api-python
 
 # [Work Breakdown Structure] (Project Scope, Big Picture) (What, Who, When, Time, Estimation, %Cmplt, Actual)
 ## [business]
