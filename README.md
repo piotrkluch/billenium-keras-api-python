@@ -17,7 +17,7 @@ deactivate
 ```
 
 3. Test
-Open VS Code then, do:
+Open VS Code, then do:
 
 ```
 [CMD + SHIFT + P]
