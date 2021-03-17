@@ -1,0 +1,5 @@
+langs = [
+    'ar','ca','cs','da','de','el','en','es','et','eu','fa','fi','fr',
+    'hi','ht','hu','in','it','ja','kn','lv','ml','mr','nl','no','pl',
+    'pt','ro','ru','si','sl','sr','sv','ta','th','tl','tr','uk','ur','zh'
+]
