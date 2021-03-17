@@ -22,7 +22,7 @@ Order development team
 # [Backlog] (Development Scope)
 ## [epic-1, keras-rest-api-python]
 feat-1/infra-setup [done]
-feat-2/add-rest-api [in progress]
+feat-2/add-rest-api [done]
 feat-3/load-keras-model
 feat-4/add-predict-endpoint
 feat-5/add-minimum-tests
