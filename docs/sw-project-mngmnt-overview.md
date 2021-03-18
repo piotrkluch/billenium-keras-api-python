@@ -23,10 +23,10 @@ Order development team
 ## [epic-1, keras-rest-api-python]
 feat-1/infra-setup [done]
 feat-2/add-rest-api [done]
-feat-3/load-keras-model
-feat-4/add-predict-endpoint
-feat-5/add-minimum-tests
-feat-6/setup-containers
+feat-3/load-keras-model [next] 3
+feat-4/add-predict-endpoint [next] 2
+feat-5/add-minimum-tests [in_progress] x
+feat-6/setup-containers [next] 4
 feat-7/update-documentation
 feat-8/load-any-model
 feat-9/gather-predictions-and-present-on-dashboard
@@ -47,10 +47,10 @@ feat/UC-10_add-security
 ...
 
 # [Issues Tracking] (Development Scope)
-...N/A
+git
 
 # [Roadmap] (Project Scope)
-...N/A
+git
 
 # [Software Requirements Specification] (Development Scope)
 keras-rest-api-python_srs.pdf
