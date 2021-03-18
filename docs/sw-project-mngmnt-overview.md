@@ -23,14 +23,14 @@ Order development team
 ## [epic-1, keras-rest-api-python]
 feat-1/infra-setup [done]
 feat-2/add-rest-api [done]
-feat-3/load-keras-model [next] 3
-feat-4/add-predict-endpoint [in_progress] x
+feat-3/load-keras-model [in_progress] x
+feat-4/add-predict-endpoint [done]
 feat-5/add-minimum-tests [done]
 feat-6/setup-containers [next] 4
-feat-7/update-documentation
-feat-8/load-any-model
-feat-9/gather-predictions-and-present-on-dashboard
-feat-10/add-security
+feat-7/update-documentation [next] 5
+feat-8/load-any-model [next] 6
+feat-9/gather-predictions-and-present-on-dashboard [next] 7
+feat-10/add-security [next] 8
 ...
 
 OR:
