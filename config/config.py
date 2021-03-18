@@ -10,8 +10,9 @@ Config = {
     'logging_level': 'debug',              # logging_level: 'debug', 'info'
     'logging_dir': './logs/',              # usually './logs'
     'webapi_host': '127.0.0.1',
-    'webapi_port': 8080
+    'webapi_port': 8080,
+    'keras_model_name': 'twitter_to_lang'
 }
 
 # Env variables, which the application requires are set/assigned here
-os.environ['DEVELOPMENT_ENVIRONMENT'] = Config['development_environment']
+os.environ['DEVELOPMENT_ENVIRONMENT'] = str(Config['development_environment'])
