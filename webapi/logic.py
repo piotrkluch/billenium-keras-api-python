@@ -7,6 +7,9 @@ from aiohttp import web
 from config.config import Config
 from webapi.routes import setup_routes
 
+import tensorflow as tf
+
+
 def main():
     loop = asyncio.get_event_loop()
     app = web.Application(loop=loop)
