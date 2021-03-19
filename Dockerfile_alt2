@@ -1,0 +1,24 @@
+FROM nvidia/cuda:latest
+
+RUN apt -qq -y update \
+	&& apt -qq -y upgrade \
+    && apt -y install python3.8 \
+    && apt -y install python3-pip \
+    && python3.8 -m pip install --upgrade pip
+
+RUN which python3.8 \
+    && which pip3
+
+RUN ln -s /usr/bin/python3.8 /usr/bin/python \
+    && ln -s /usr/bin/pip3 /usr/bin/pip \
+    && python --version \
+    && which pip
+
+WORKDIR /app
+COPY . /app
+
+RUN pip3 install -r /app/requirements.txt
+
+EXPOSE 8080
+
+ENTRYPOINT ["/app/docker-entrypoint.sh"]

@@ -1,0 +1,11 @@
+FROM tensorflow/tensorflow:latest
+
+WORKDIR /app
+COPY . /app
+
+RUN python3 -m pip install --upgrade pip virtualenv setuptools wheel && \
+    pip3 install -r /app/requirements.txt
+
+EXPOSE 8080
+
+ENTRYPOINT ["/app/docker-entrypoint.sh"]
