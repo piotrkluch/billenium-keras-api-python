@@ -44,12 +44,13 @@ feat-5/add-minimum-tests [done]
 feat-6/setup-containers [done]
 feat-7/update-documentation [done]
 feat-8/load-any-model [done]
-feat-9/gather-predictions-and-present-on-dashboard [next] 6
+feat-9/gather-predictions-and-present-on-dashboard [in_progress] 6
 feat-10/add-security [next] 7
-feat-11/add-prediction-logic [in_progress] 5
+feat-11/add-prediction-logic [done]
 feat-12/design-data-structures-and-flow-model [done]
 feat-13/add-user-docs [next] 8
 feat-14/setup-frontend-service [next] 9
+feat-15/implement-event-store [in_progress] 6.1
 ...
 
 OR:
