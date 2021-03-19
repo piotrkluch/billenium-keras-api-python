@@ -44,14 +44,18 @@ feat-5/add-minimum-tests [done]
 feat-6/setup-containers [done]
 feat-7/update-documentation [done]
 feat-8/load-any-model [done]
-feat-9/gather-predictions-and-present-on-dashboard [in_progress] 6
+feat-9/gather-predictions [done]
 feat-10/add-security [in_progress] 7
 feat-11/add-prediction-logic [done]
 feat-12/design-data-structures-and-flow-model [done]
 feat-13/add-user-docs [next] 8
 feat-14/setup-frontend-service-react [in_progress] 9
-feat-15/implement-event-store [in_progress] 6.1
-feat-16/initialize-event-store-crud-to-disk [in_progress] 6.2
+feat-15/implement-event-store [done]
+feat-16/initialize-event-store-crud-to-disk [done]
+feat-17/update-diagrams-and-docs [done]
+feat-18/improve-http-requests-add-try-catch-and-status-codes [next] 11
+feat-19/add-logging [next] 12
+feat-20/present-predictions-on-dashboard [in_progress] 10
 ...
 
 OR:
