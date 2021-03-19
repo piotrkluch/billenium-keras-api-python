@@ -4,6 +4,6 @@
     "python.testing.unittestEnabled": false,
     "python.testing.nosetestsEnabled": false,
     "python.testing.pytestArgs": [
-        "tests"
+        "--disable-pytest-warnings", "tests"
     ]
 }
