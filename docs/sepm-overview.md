@@ -41,13 +41,15 @@ feat-2/add-rest-api [done]
 feat-3/load-keras-model [done]
 feat-4/add-predict-endpoint [done]
 feat-5/add-minimum-tests [done]
-feat-6/setup-containers [in_progress] 4
-feat-7/update-documentation [next] 5
+feat-6/setup-containers [done]
+feat-7/update-documentation [done]
 feat-8/load-any-model [done]
 feat-9/gather-predictions-and-present-on-dashboard [next] 6
 feat-10/add-security [next] 7
-feat-11/add-prediction-logic [next] 8
-feat-12/design-ds-and-flow-model [next] 4
+feat-11/add-prediction-logic [in_progress] 5
+feat-12/design-data-structures-and-flow-model [in_progress] 4
+feat-13/add-user-docs [next] 8
+feat-14/setup-frontend-service [next] 9
 ...
 
 OR:
