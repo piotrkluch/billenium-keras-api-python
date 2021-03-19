@@ -51,6 +51,7 @@ feat-12/design-data-structures-and-flow-model [done]
 feat-13/add-user-docs [next] 8
 feat-14/setup-frontend-service-react [in_progress] 9
 feat-15/implement-event-store [in_progress] 6.1
+feat-16/initialize-event-store-crud-to-disk [in_progress] 6.2
 ...
 
 OR:
