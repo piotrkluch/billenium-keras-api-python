@@ -28,26 +28,30 @@ class Prediction(Entity):
 
         self._phrase = event.phrase
         self._language = event.language
-        self._output = event.output
 
     def __repr__(self):
         return "{discarded}Prediction(" \
                "id={prediction._id}, " \
-               "name={prediction._name})" \
+               "phrase={prediction._phrase})" \
+               "language={prediction._language})" \
             .format(discarded="*Discarded* " if self._discarded else "", prediction=self)
 
     # [phrase]
     @property
     def phrase(self):
-        """Name this prediction"""
         self._check_not_discarded()
         return self._phrase
+
+    @staticmethod
+    def _validate_phrase(phrase):
+        if len(phrase) < 1:
+            raise ValueError("Prediction phrase cannot be empty")
+        return phrase
     #[/phrase]
 
     # [language]
     @property
     def language(self):
-        """Name this prediction"""
         self._check_not_discarded()
         return self._language
     #[/language]
@@ -67,13 +71,14 @@ class Prediction(Entity):
 # Factories - the aggregate root factory
 #
 
-def create_prediction(name):
+def create_prediction(phrase, language):
     prediction_id = make_unique_id()
 
     event = Prediction.Created(aggregate_id=prediction_id,
                                entity_id=prediction_id,
                                entity_version=0,
-                               phrase=Prediction._validate_name(name))
+                               phrase=Prediction._validate_phrase(phrase),
+                               language=language)
 
     prediction = _when(event)
     event._aggregate_instance_id = prediction.instance_id
@@ -129,7 +134,7 @@ class Repository(metaclass=ABCMeta):
         raise NotImplementedError
 
     @abstractmethod
-    def predictions_with_name(self, name, prediction_ids=None):
+    def predictions_with_phrase(self, phrase, prediction_ids=None):
         raise NotImplementedError
 
 

@@ -11,7 +11,7 @@ Config = {
     'logging_dir': './logs/',              # usually './logs'
     'webapi_host': '127.0.0.1',
     'webapi_port': 8080,
-    'keras_model_name': 'twitter_to_lang'
+    'keras_model_name': 'twitter_to_lang',
 }
 
 # Env variables, which the application requires are set/assigned here
