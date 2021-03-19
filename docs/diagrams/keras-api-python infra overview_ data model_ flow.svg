@@ -1,0 +1,54 @@
+<svg version="1.1" baseProfile="full" width="432.5" height="352" viewbox="0 0 432.5 352" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events" style="font:bold  12pt Helvetica, Helvetica, sans-serif;;stroke-linejoin:round;stroke-linecap:round">
+  <title >keras-api-python infra overview, data model, flow</title>
+  <desc >#title: keras-api-python infra overview, data model, flow
+#stroke: blue
+#fill: lightblue
+#.box: fill=#8f8 dashed
+[&lt;frame&gt;keras-api-python infra overview, data model, flow|
+
+[&lt;box&gt;docker images] 
+[&lt;box&gt;docker images] create-&gt; [&lt;package&gt;keras-api-python]
+[&lt;box&gt;docker images] -&gt; [&lt;package&gt;keras-dashboard-react]
+
+[&lt;package&gt;keras-api-python|
+
+[Prediction|
+- phrases
+]
+
+]
+[&lt;package&gt;keras-api-python]HTTP GET&lt;-[&lt;package&gt;keras-dashboard-react]
+
+[&lt;package&gt;keras-dashboard-react|
+
+
+]
+
+]</desc>
+  <rect x="0" y="0" height="352" width="432.5" style="stroke:none; fill:transparent;"></rect>
+  <rect x="13.5" y="13.5" height="326" width="406.5" data-name="keras-api-python infra overview, data model, flow" style="stroke:blue;fill:lightblue;stroke-dasharray:none;stroke-width:3;"></rect>
+  <path d="M13.5 44.5 L396.8 44.5 L412.3 29 L412.3 13.5" data-name="keras-api-python infra overview, data model, flow" style="stroke:blue;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="21.5" y="35" style="fill: blue;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="keras-api-python infra overview, data model, flow">keras-api-python infra overview, data model, flow</text>
+  <text x="90.4" y="108.5" style="fill: blue;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="keras-api-python infra overview, data model, flow">create</text>
+  <path d="M145.6 88.5 L177.3 108.5 L177.3 128.5 L177.3 128.5 " data-name="keras-api-python infra overview, data model, flow" style="stroke:blue;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M171.9 115.2 L177.3 121.8 L182.6 115.2 L177.3 128.5 Z" data-name="keras-api-python infra overview, data model, flow" style="stroke:blue;fill:blue;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M96.4 88.5 L64.8 108.5 L64.8 188 L64.8 188 L64.8 267.5 L64.8 267.5 L93.2 287.5 L93.2 287.5 " data-name="keras-api-python infra overview, data model, flow" style="stroke:blue;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M79.3 284.2 L87.8 283.7 L85.4 275.5 L93.2 287.5 Z" data-name="keras-api-python infra overview, data model, flow" style="stroke:blue;fill:blue;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="185.3" y="267.5" style="fill: blue;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="keras-api-python infra overview, data model, flow">HTTP GET</text>
+  <path d="M177.3 247.5 L177.3 267.5 L148.8 287.5 L148.8 287.5 " data-name="keras-api-python infra overview, data model, flow" style="stroke:blue;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M182.6 260.8 L177.3 254.2 L171.9 260.8 L177.3 247.5 Z" data-name="keras-api-python infra overview, data model, flow" style="stroke:blue;fill:blue;stroke-dasharray:none;stroke-width:3;"></path>
+  <rect x="104.5" y="159.5" height="88" width="145" data-name="keras-api-python" style="stroke:blue;fill:lightblue;stroke-dasharray:none;stroke-width:3;"></rect>
+  <path d="M104.5 159.5 L104.5 128.5 L239.7 128.5 L239.7 159.5 Z" data-name="keras-api-python" style="stroke:blue;fill:lightblue;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M104.5 159.5 L249.5 159.5" data-name="keras-api-python" style="stroke:blue;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="112.5" y="150" style="fill: blue;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="keras-api-python">keras-api-python</text>
+  <rect x="117.5" y="172.5" height="62" width="94" data-name="Prediction" style="stroke:blue;fill:lightblue;stroke-dasharray:none;stroke-width:3;"></rect>
+  <path d="M117.5 203.5 L211.5 203.5" data-name="Prediction" style="stroke:blue;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="164.5" y="194" style="fill: blue;font:bold  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="Prediction">Prediction</text>
+  <text x="125.5" y="225" style="fill: blue;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="Prediction">- phrases</text>
+  <rect x="26.5" y="318.5" height="8" width="189" data-name="keras-dashboard-react" style="stroke:blue;fill:lightblue;stroke-dasharray:none;stroke-width:3;"></rect>
+  <path d="M26.5 318.5 L26.5 287.5 L203.5 287.5 L203.5 318.5 Z" data-name="keras-dashboard-react" style="stroke:blue;fill:lightblue;stroke-dasharray:none;stroke-width:3;"></path>
+  <path d="M26.5 318.5 L215.5 318.5" data-name="keras-dashboard-react" style="stroke:blue;fill:none;stroke-dasharray:none;stroke-width:3;"></path>
+  <text x="34.5" y="309" style="fill: blue;font:normal  12pt Helvetica, Helvetica, sans-serif;" data-name="keras-dashboard-react">keras-dashboard-react</text>
+  <rect x="57.5" y="57.5" height="31" width="128" data-name="docker images" style="stroke:blue;fill:#8f8;stroke-dasharray:6 6;stroke-width:3;"></rect>
+  <text x="121.5" y="79" style="fill: blue;font:normal  12pt Helvetica, Helvetica, sans-serif;text-anchor: middle;" data-name="docker images">docker images</text>
+</svg>

@@ -47,7 +47,7 @@ feat-8/load-any-model [done]
 feat-9/gather-predictions-and-present-on-dashboard [next] 6
 feat-10/add-security [next] 7
 feat-11/add-prediction-logic [in_progress] 5
-feat-12/design-data-structures-and-flow-model [in_progress] 4
+feat-12/design-data-structures-and-flow-model [done]
 feat-13/add-user-docs [next] 8
 feat-14/setup-frontend-service [next] 9
 ...
