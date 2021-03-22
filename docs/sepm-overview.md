@@ -56,7 +56,7 @@ feat-10/add-security [done]
 feat-11/add-prediction-logic [done]
 feat-12/design-data-structures-and-flow-model [done]
 feat-13/add-user-docs [done]
-feat-14/setup-frontend-service-react [in_progress] 9
+feat-14/setup-frontend-service-react [done]
 feat-15/implement-event-store [done]
 feat-16/initialize-event-store-crud-to-disk [done]
 feat-17/update-diagrams-and-docs [done]
