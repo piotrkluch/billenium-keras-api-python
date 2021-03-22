@@ -27,9 +27,11 @@ If you want to leave the project and work from the same terminal, optionally you
 
 ### 3.2. Test from IDE
 Open VS Code then, do:
+```
     [CMD + SHIFT + P]
     >discover unit tests
     [Enter]
+```
 
 ## 4. Run
 Run with sh script:

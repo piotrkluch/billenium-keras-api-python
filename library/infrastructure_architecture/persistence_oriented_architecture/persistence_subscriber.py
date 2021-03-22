@@ -1,4 +1,4 @@
-from kanban.domain.model.events import DomainEvent, subscribe, unsubscribe
+from library.domain.events import DomainEvent, subscribe, unsubscribe
 
 
 class PersistenceSubscriber:

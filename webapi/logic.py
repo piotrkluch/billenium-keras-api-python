@@ -1,9 +1,10 @@
-########################################
-# Init for local development and testing
+###########################################
+# Init for local development and production
 #
 import asyncio
-import os
 from aiohttp import web
+from aiohttp_route_middleware import UrlDispatcherEx
+import aiohttp_cors
 
 from config.config import Config
 from webapi.routes import setup_routes
@@ -18,11 +19,26 @@ def main():
     app.on_startup.append(init_model)
     app.on_cleanup.append(close_model)
 
-    app = setup_routes(app)
+    subapp = web.Application(router=UrlDispatcherEx())
+    subapp = setup_routes(subapp)
+    app.add_subapp('/api/v1', subapp)
+
     web.run_app(app,
                 host=Config['webapi_host'],
                 port=Config['webapi_port'])
-    return app
 
-#TODO: Add CORS support (security)
-#TODO: Add middleware layer (security)
+    # Configure default CORS settings.
+    cors = aiohttp_cors.setup(app, defaults={
+        "*": aiohttp_cors.ResourceOptions(
+            allow_credentials=True,
+            expose_headers="*",
+            allow_headers="*",
+            allow_methods="*"
+        )
+    })
+
+    # Configure CORS on all routes.
+    for route in list(app.router.routes()):
+        cors.add(route)
+
+    return app

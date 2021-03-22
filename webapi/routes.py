@@ -9,6 +9,14 @@ from webapi.views import (
 )
 
 # =============================================================================
+# Middleware
+#
+
+from webapi.middleware import (
+   middleware_authenticate
+)
+
+# =============================================================================
 # Routes go here
 #
 #  ▪▄▄▄▄         ▄• ▄▌▄▄▄▄▄▄▄▄ ..▄▄ · 
@@ -18,7 +26,7 @@ from webapi.views import (
 #    .▀  ▀ ▀█▄▀▪ ▀▀▀  ▀▀▀  ▀▀▀  ▀▀▀▀ 
 #
 #
-def setup_routes(app):
-    app.router.add_route('GET',  '/',        get_api_index)
-    app.router.add_route('POST', '/predict', predict)
-    return app
+def setup_routes(subapp):
+    subapp.router.add_route('GET',  '/',        get_api_index)
+    subapp.router.add_route('POST', '/predict', middleware_authenticate, predict)
+    return subapp
