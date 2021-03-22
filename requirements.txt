@@ -2,6 +2,7 @@ asyncio
 aiohttp
 aiohttp_route_middleware
 aiohttp_cors
+aiohttp_swagger3
 PyJWT
 pytest-aiohttp
 tensorflow

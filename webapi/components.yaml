@@ -1,0 +1,30 @@
+components:
+  schemas:
+    ApiStatusResponse:
+      type: object
+      properties:
+        status:
+          type: string
+    PredictionRequest:
+      type: object
+      required:
+        - data
+      properties:
+        data:
+          type: array
+          items:
+            type: object
+    PredictionResponse:
+      type: array
+      items:
+        type: object
+        properties:
+          sentence:
+            type: string
+          language:
+            type: string
+  securitySchemes:
+      ApiKeyAuth:
+        type: apiKey
+        in: header
+        name: X-API-Key

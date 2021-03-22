@@ -20,11 +20,46 @@ def _render_json_prediction(prediction):
     }
     return body
 
-async def get_api_index(request):
-    body = {'status_code': 200}
+async def get_api_status(request: web.Request) -> web.Response:
+    """
+    ---
+    summary: Get API status
+    responses:
+      '200':
+        description: Api status object
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: "#/components/schemas/ApiStatusResponse"
+    """
+    body = {'status': 'running'}
     return web.json_response(body)
 
-async def predict(request):
+async def predict(request: web.Request) -> web.Response:
+    """
+    ---
+    summary: Get prediction for sentence
+    tags:
+        - predict
+    security:
+        - ApiKeyAuth: []
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            oneOf:
+              - $ref: "#/components/schemas/PredictionRequest"
+    responses:
+      '200':
+        description: Returns predicted language for phrase
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: "#/components/schemas/PredictionResponse"
+    """
     try:
         body = []
         predictions = []

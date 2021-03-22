@@ -2,12 +2,15 @@
 # Init logic for local development, testing and production
 #
 import asyncio
+import os
 from aiohttp import web
 from aiohttp_route_middleware import UrlDispatcherEx
+from aiohttp_swagger3 import SwaggerDocs, SwaggerUiSettings
 import aiohttp_cors
 
 from config.config import Config
-from webapi.routes import setup_routes
+from config.paths import Paths
+from webapi.routes import *
 from webapi.model import init_model, close_model
 
 
@@ -38,9 +41,26 @@ def setup_cors(app):
         cors.add(route)
     return app
 
+def setup_swagger(app):
+    swagger = SwaggerDocs(
+        app,
+        swagger_ui_settings=SwaggerUiSettings(path="/docs/"),
+        title="API Specification: keras-api-python",
+        version="1.0.0",
+        components= os.path.join(Paths.directories['webapi_dir'], "components.yaml")
+    )
+    swagger.add_routes( #TODO: Automagically add all routes
+        [
+            web.get("/api/v1/", get_api_status),
+            web.post("/api/v1/predict", predict)
+        ]
+    )
+    return app
+
 def main():
     app = create_application()
     app = setup_cors(app)
+    app = setup_swagger(app)
     web.run_app(app,
                 host=Config['webapi_host'],
                 port=Config['webapi_port'])

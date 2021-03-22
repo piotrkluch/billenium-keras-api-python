@@ -17,6 +17,7 @@ MODELS_DIR = os.path.join(ROOT_DIR, "resources/models")
 TEMP_DIR = os.path.join(ROOT_DIR, "tmp")
 LOGS_DIR = os.path.join(ROOT_DIR, "logs")
 DATABASE_DIR = os.path.join(ROOT_DIR, "database")
+WEBAPI_DIR = os.path.join(ROOT_DIR, "webapi")
 
 # =============================================================================
 # Files
@@ -31,7 +32,8 @@ paths = {
         'models_dir': MODELS_DIR,
         'temp_dir': TEMP_DIR,
         'logs_dir': LOGS_DIR,
-        'database_dir': DATABASE_DIR
+        'database_dir': DATABASE_DIR,
+        'webapi_dir': WEBAPI_DIR
     },
     'files': {
         'info_log_file': INFO_LOG_FILE,

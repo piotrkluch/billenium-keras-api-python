@@ -4,7 +4,7 @@ from aiohttp import web
 # Main routes import
 #
 from webapi.views import (
-    get_api_index,
+    get_api_status,
     predict
 )
 
@@ -27,6 +27,6 @@ from webapi.middleware import (
 #
 #
 def setup_routes(subapp):
-    subapp.router.add_route('GET',  '/',        get_api_index)
+    subapp.router.add_route('GET',  '/',        get_api_status)
     subapp.router.add_route('POST', '/predict', middleware_authenticate, predict)
     return subapp

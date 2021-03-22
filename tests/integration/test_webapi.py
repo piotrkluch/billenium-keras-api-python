@@ -3,14 +3,14 @@ from webapi.logic import create_application
 async def get_client(aiohttp_client):
     return await aiohttp_client(create_application())
 
-async def test_get_api_index(aiohttp_client):
+async def test_get_api_status(aiohttp_client):
     client = await get_client(aiohttp_client)
 
     resp = await client.get('/api/v1/')
     assert resp.status == 200
 
     text = await resp.text()
-    assert '200' in text
+    assert 'running' in text
 
 async def test_predict(aiohttp_client):
     client = await get_client(aiohttp_client)
