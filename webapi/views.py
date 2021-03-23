@@ -68,6 +68,8 @@ async def predict(request: web.Request) -> web.Response:
         if not 'data' in payload.keys():
             raise web.HTTPBadRequest(text="Missing parameter: data")
 
+        #TODO: Move this block to a model service or into model, need more thought,
+        #TODO: as it could also save output and store model information
         for sentence in payload['data']:
             if not 'model' in request.app:
                 raise web.HTTPInternalServerError(reason="Missing resource: keras model")
@@ -75,8 +77,8 @@ async def predict(request: web.Request) -> web.Response:
             key = output.argmax(axis=1)[0]
 
             language_mapper_path = os.path.join(Paths.directories['models_dir'], request.app['config']['keras_model_name'], 'language mapper.txt')
-            language = exec(open(language_mapper_path).read())
-            language = 'en-US' #or langs[key] #TOFIX: Find a better way to load this
+            exec(open(language_mapper_path).read(), globals())
+            language = langs[key]
 
             predictions.append({"sentence": sentence,
                                 "language": language})

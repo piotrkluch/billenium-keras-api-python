@@ -38,7 +38,7 @@ async def test_predict_no_data_parameter_status_400(aiohttp_client):
     text = await resp.text()
     assert 'Missing parameter: data' in text
 
-async def test_predict_no_data_parameter_status_500(aiohttp_client):
+async def test_predict_no_model_loaded_status_500(aiohttp_client):
     client = await get_client(aiohttp_client)
     client.app._subapps[0]._state['model'] = None
 

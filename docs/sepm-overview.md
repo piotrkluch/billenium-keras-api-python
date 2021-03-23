@@ -64,7 +64,7 @@ feat-18/improve-http-requests-add-try-catch-and-status-codes [done]
 feat-19/add-logging [in_progress] 1
 feat-20/present-predictions-on-dashboard [in_progress] 2
 feat-21/update-readme-files [done]
-feat-22/do-all-tofix [in_progress] 3
+feat-22/do-all-tofix [done]
 feat-23/do-all-todos [next]
 feat-24/improve-logging [next]
 ...

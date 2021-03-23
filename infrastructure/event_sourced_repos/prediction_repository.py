@@ -4,7 +4,7 @@ from library.infrastructure_architecture.event_sourced_architecture.event_tracki
 
 
 class PredictionRepository(prediction.Repository, EventTrackingRepository):
-    """Concrete repository for Transcripts for Event Store
+    """Concrete repository for Predictions for Event Store
     """
 
     def __init__(self, transient_event_queue, persistent_event_store, **kwargs):
@@ -44,7 +44,7 @@ class PredictionRepository(prediction.Repository, EventTrackingRepository):
         return self._extant_aggregate_ids()
 
     def prediction_with_id(self, prediction_id):
-        """Retrieve a Transcript by ID.
+        """Retrieve a Prediction by ID.
 
         Args:
             prediction_id: An UniqueId corresponding to the Prediction.
@@ -62,7 +62,7 @@ class PredictionRepository(prediction.Repository, EventTrackingRepository):
 
         Args:
             prediction_ids: An optional iterable series of UniqueIds to
-                which the results will be restricted. If None, all transcripts
+                which the results will be restricted. If None, all Predictions
                 will be returned.
 
         Returns:
