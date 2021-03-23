@@ -41,9 +41,9 @@ async def predict(request: web.Request) -> web.Response:
     ---
     summary: Get prediction for sentence
     tags:
-        - predict
+      - predict
     security:
-        - ApiKeyAuth: []
+      - ApiKeyAuth: []
     requestBody:
       required: true
       content:
@@ -65,7 +65,12 @@ async def predict(request: web.Request) -> web.Response:
         predictions = []
         payload = await request.json()
 
+        if not 'data' in payload.keys():
+            raise web.HTTPBadRequest(text="Missing parameter: data")
+
         for sentence in payload['data']:
+            if not 'model' in request.app:
+                raise web.HTTPInternalServerError(reason="Missing resource: keras model")
             output = request.app['model'].predict([sentence])
             key = output.argmax(axis=1)[0]
 

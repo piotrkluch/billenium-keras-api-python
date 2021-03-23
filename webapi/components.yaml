@@ -13,7 +13,7 @@ components:
         data:
           type: array
           items:
-            type: object
+            type: string
     PredictionResponse:
       type: array
       items:
