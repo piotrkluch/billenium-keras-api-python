@@ -1,8 +1,6 @@
 # billenium-keras-api-python
 
-
-
-
+Description: Detect language for given sentences.
 
 | Table of Contents |
 |---|
