@@ -61,7 +61,7 @@ feat-15/implement-event-store [done]
 feat-16/initialize-event-store-crud-to-disk [done]
 feat-17/update-diagrams-and-docs [done]
 feat-18/improve-http-requests-add-try-catch-and-status-codes [done]
-feat-19/add-logging [in_progress] 1
+feat-19/add-logging [done]
 feat-20/present-predictions-on-dashboard [in_progress] 2
 feat-21/update-readme-files [done]
 feat-22/do-all-tofix [done]
