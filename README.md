@@ -30,7 +30,7 @@ make tests
 ```
 
 ### 3.2. Test from IDE
-Open VS Code then, do:
+Open VS Code, then do:
 ```
 [CMD + SHIFT + P]
 >discover unit tests
@@ -41,9 +41,15 @@ Open VS Code then, do:
 &nbsp;
 
 ## 4. Run
-Run with sh script:
+### 4.1. Run from CLI
 ```
 ./start-local-run.sh
+```
+
+### 4.2. Run from IDE
+Open VS Code, then do:
+```
+[FN + 5] / [F5]
 ```
 
 &nbsp;\
@@ -59,3 +65,9 @@ Deploy to dev with
 ```
 git push origin dev
 ```
+
+&nbsp;\
+&nbsp;
+
+## 6. Notes
+Swagger/OpenAPI spec is available after the server has started under URI: http://127.0.0.1:8080/docs
