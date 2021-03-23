@@ -1,9 +1,12 @@
 # billenium-keras-api-python
 
+
 ## 1. Prerequisites
 - Python 3.8.8
 - Aiohttp 3.7
 - Tensorflow 2.0
+
+![screenshot](./docs/media/screenshot.png)
 
 &nbsp;\
 &nbsp;
