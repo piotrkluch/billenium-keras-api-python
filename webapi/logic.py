@@ -52,7 +52,8 @@ def setup_swagger(app):
     swagger.add_routes( #TODO: Automagically add all routes
         [
             web.get("/api/v1/", get_api_status),
-            web.post("/api/v1/predict", predict)
+            web.post("/api/v1/predict", predict),
+            web.get("/api/v1/predictions", get_predictions)
         ]
     )
     return app
