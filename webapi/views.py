@@ -99,3 +99,33 @@ async def predict(request: web.Request) -> web.Response:
     [body.append(_render_json_prediction(p)) for p in predictions]
     return web.json_response(body)
 
+async def get_predictions(request: web.Request) -> web.Response:
+    """
+    ---
+    summary: Get predictions history
+    tags:
+      - predict
+    security:
+      - ApiKeyAuth: []
+    responses:
+      '200':
+        description: Returns predictions history
+        content:
+          application/json:
+            schema:
+              oneOf:
+                - $ref: "#/components/schemas/PredictionResponse"
+    """
+    Log.info("[get predictions] New request")
+    body = []
+    predictions_body = []
+    with unit_of_work(request) as u:
+        prediction_repo = u.using(PredictionRepository)
+        predictions = prediction_repo.predictions_with_ids()
+
+    for p in predictions:
+        predictions_body.append({"sentence": p.phrase,
+                                 "language": p.language})
+
+    [body.append(_render_json_prediction(p)) for p in predictions_body]
+    return web.json_response(body)

@@ -64,3 +64,10 @@ async def test_security_api_key_request(aiohttp_client):
     request_body = {'data': []}
     resp = await client.post('/api/v1/predict', json=request_body, headers=headers_fake)
     assert resp.status != 200
+
+async def test_get_predictions(aiohttp_client):
+    client = await get_client(aiohttp_client)
+    headers = {'X-API-Key': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOiJhZG1pbiJ9.pVAm6V1ybQDZm1Fl0P2ToucSgqNHWJunRpzjSURqF6M'}
+
+    resp = await client.get('/api/v1/predictions', headers=headers)
+    assert resp.status == 200
