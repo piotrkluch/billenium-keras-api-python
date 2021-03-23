@@ -3,6 +3,7 @@ import os
 from aiohttp import web
 import tensorflow as tf
 from config.paths import Paths
+from utilities.log import Log
 
 from contexts.prediction.domain.model.prediction import create_prediction
 from infrastructure.event_sourced_repos.prediction_repository import PredictionRepository
@@ -33,6 +34,7 @@ async def get_api_status(request: web.Request) -> web.Response:
               oneOf:
                 - $ref: "#/components/schemas/ApiStatusResponse"
     """
+    Log.info("[get get_api_status] New request")
     body = {'status': 'running'}
     return web.json_response(body)
 
@@ -60,6 +62,7 @@ async def predict(request: web.Request) -> web.Response:
               oneOf:
                 - $ref: "#/components/schemas/PredictionResponse"
     """
+    Log.info("[post predict] New request")
     try:
         body = []
         predictions = []
