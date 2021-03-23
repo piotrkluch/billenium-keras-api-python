@@ -98,3 +98,4 @@ async def predict(request: web.Request) -> web.Response:
 
     [body.append(_render_json_prediction(p)) for p in predictions]
     return web.json_response(body)
+
